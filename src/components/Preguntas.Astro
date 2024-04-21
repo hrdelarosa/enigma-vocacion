@@ -1,0 +1,47 @@
+---
+import Respuestas from "./Respuestas.astro";
+
+interface Props {
+  pregunta: string;
+  numPregunta: number;
+  totalPregutas: number;
+  respuestas: any[];
+}
+
+const { pregunta, numPregunta, totalPregutas, respuestas } = Astro.props;
+---
+
+<section>
+  <h3>{`Pregunta ${numPregunta} de ${totalPregutas}`}</h3>
+  <div id="content-pregunta">
+    <h1>{pregunta}</h1>
+    <div id="respuestas">
+      {
+        respuestas.map((resp, index) => (
+          <Respuestas respuesta={resp} value={index} />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 0 25px;
+  }
+  h3 {
+    padding-bottom: 15px;
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  #respuestas {
+    /* margin-top: 15px; */
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    border-radius: 10px;
+    /* width: 320px; */
+  }
+</style>

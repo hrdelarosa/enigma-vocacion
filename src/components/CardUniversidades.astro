@@ -1,0 +1,116 @@
+---
+import Graduacion from "../icons/Graduacion.astro";
+import Pin from "../icons/Pin.astro";
+import Direccion from "../icons/Direccion.astro";
+import Link from "../icons/Link.astro";
+
+interface Props {
+  nombre: string;
+  tipo: string;
+  region: string;
+  direccion: string;
+  link: string;
+}
+
+const { nombre, tipo, region, direccion, link } = Astro.props;
+---
+
+<div class="contenedor-universidades-card">
+  <h2 class="titulo-card-unis">{nombre}</h2>
+  <div id="info-card-univer">
+    <div class="texto-format-unis">
+      <div class="cont-svg-info">
+        <Graduacion />
+      </div>
+      <p class="texto-card-unis">{tipo}</p>
+    </div>
+    <div class="texto-format-unis">
+      <div class="cont-svg-info">
+        <Pin />
+      </div>
+      <p class="texto-card-unis">{region}</p>
+    </div>
+    <div class="texto-format-unis">
+      <div class="cont-svg-info">
+        <Direccion />
+      </div>
+      <p class="texto-card-unis">{direccion}</p>
+    </div>
+    <a
+      class="texto-format-unis link"
+      href="https://www.uagro.mx/"
+      target="_blank"
+    >
+      <div class="cont-svg-info">
+        <Link />
+      </div>
+      <p class="texto-card-unis">{link}</p>
+    </a>
+  </div>
+</div>
+
+<style is:global>
+  .contenedor-universidades-card {
+    max-width: 350px;
+    padding: 20px;
+    border: 7px solid #d9eef4;
+    color: #074973;
+    border-radius: 30px;
+    transition:
+      background-color ease-in-out 0.3s,
+      border-color ease-in-out 0.3s;
+  }
+  .contenedor-universidades-card:hover {
+    background-color: #d9eef4;
+    color: #074973;
+  }
+  #info-card-univer {
+    display: flex;
+    /* grid-template-rows: 1fr auto; */
+    flex-direction: column;
+    gap: 5px;
+  }
+  .cont-svg-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .texto-format-unis {
+    display: grid;
+    grid-template-columns: 13px auto;
+    align-items: center;
+  }
+  .link {
+    text-decoration: none;
+    color: inherit;
+    width: inherit;
+  }
+  .link:hover {
+    color: #33728b;
+    text-decoration: underline; /* Aplica subrayado al hacer hover */
+    animation: underline-animate 1s linear forwards; /* Animación personalizada */
+  }
+  @keyframes underline-animate {
+    0% {
+      text-decoration-color: transparent; /* Subrayado transparente inicialmente */
+      text-decoration-offset: 100%; /* Desplaza el subrayado hacia la derecha */
+    }
+    100% {
+      text-decoration-color: #33728b; /* Color del subrayado */
+      text-decoration-offset: 0; /* Desplaza el subrayado a su posición normal */
+    }
+  }
+  .titulo-card-unis {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 900;
+  }
+  .texto-card-unis {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 5px;
+  }
+  .link .texto-card-unis {
+    overflow: hidden;
+  }
+</style>

@@ -1,0 +1,148 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import CardUniversidades from "../components/CardUniversidades.astro";
+import rectoria from "../img/rectoriaUagro.jpg";
+import { universidadesGuerrero } from "../consts/unis";
+---
+
+<Layout title="Univerdiades">
+  <main>
+    <div class="contenedor">
+      <h1>Universidades de la <span class="cuadro">UAGro</span>.</h1>
+      <section id="conten">
+        <div id="info-conten">
+          <p>
+            La Universidad Autónoma de Guerrero ofrece una gran variedad de
+            Universidades, la plataforma cuenta con todas ellas. Todas las
+            universidades van desde instituciones centradas en la tecnología
+            hasta aquellas dedicadas a las humanidades y las artes, contamos con
+            una amplia red de universidades para satisfacer tus necesidades
+            académicas.
+          </p>
+        </div>
+        <div id="img-conten">
+          <Image src={rectoria} alt="Resctoria" />
+        </div>
+      </section>
+    </div>
+    <div class="universidades">
+      <div class="radio-inputs">
+        <label class="radio">
+          <input type="radio" name="radio" checked="" />
+          <span class="name">Ciencias Políticas</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" />
+          <span class="name">Artes y Humanidades</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" />
+          <span class="name">Biologicas y de la Salud</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" />
+          <span class="name">Fisico-Matematicas e Ingenierias</span>
+        </label>
+      </div>
+      <section class="contenedor-universidades">
+        {
+          universidadesGuerrero.map((uni, index) => (
+            <CardUniversidades
+              nombre={uni.nombre}
+              tipo={uni.tipoCarrera}
+              region={uni.region}
+              direccion={uni.direccion}
+              link={uni.enlace}
+            />
+          ))
+        }
+      </section>
+    </div>
+  </main>
+</Layout>
+<Footer />
+
+<style>
+  /* main {
+    background-color: #fdfbf6;
+    color: #042842;
+  } */
+  .contenedor {
+    display: grid;
+    align-content: center;
+    padding: 60px 120px 0;
+    /* height: 92vh; */
+    /* text-align: end; */
+    /* height: 92vh; */
+  }
+  h1 {
+    font-size: 42px;
+    /* text-align: end; */
+  }
+  p {
+    font-size: 18px;
+  }
+  #conten {
+    display: flex;
+    padding: 0 35px;
+    gap: 60px;
+    align-items: center;
+  }
+  img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .universidades {
+    padding: 40px 140px;
+  }
+  .radio-inputs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    /* background-color: #074973; */
+    background-color: #d9eef4;
+    box-sizing: border-box;
+    /* box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06); */
+    box-shadow: 0 0 0px 1px rgba(8, 94, 147, 0.12);
+    padding: 0.25rem;
+    width: auto;
+    font-size: 14px;
+  }
+  .radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .radio-inputs .radio input {
+    display: none;
+  }
+  .radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem 0;
+    /* color: rgba(51, 65, 85, 1); */
+    color: #054a71;
+    transition: all 0.15s ease-in-out;
+  }
+  .radio-inputs .radio input:checked + .name {
+    /* background-color: #fff; */
+    background-color: #054a71;
+    color: #d9eef4;
+    font-weight: 600;
+  }
+  .contenedor-universidades {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    row-gap: 25px;
+  }
+</style>

@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/Button.astro";
+import imag from "../img/pruebaSF.png";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Empezar Prueba">
+  <main>
+    <div class="contenedor-prin">
+      <h1 id="titulo">
+        Prueba de <span class="cuadro">Orientación Vocacional</span>
+      </h1>
+      <section id="contenido">
+        <div id="content-info">
+          <p id="text-info">
+            Esta prueba, en colaboración con la Universidad Autónoma de
+            Guerrero, te ayudará a explorar tus intereses, habilidades y
+            valores, brindarte orientación sobre las áreas que se adapta mejor a
+            ti. Nuestro objetivo es proporcionarte una guía valiosa que te ayude
+            a tomar decisiones informadas sobre tu futuro académico y
+            profesional.
+          </p>
+          <div>
+            <p id="text-boton">
+              El test es gratuito y sin compromiso a realizarlo.
+            </p>
+            <!-- <Button url="/prueba/prueba" texto="Empezar Prueba" /> -->
+            <button class="boton-sig">
+              <a href="/prueba/prueba">Empezar Prueba</a>
+            </button>
+            <div id="content-check">
+              <label class="container">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <span id="text-check"
+                >Al continuar, acepta las Condiciones de servicio y la Política
+                de privacidad.</span
+              >
+            </div>
+          </div>
+        </div>
+        <Image class="prueba" src={imag} alt="fondo" />
+      </section>
+    </div>
+  </main>
+</Layout>
+<Footer />
+
+<style>
+  main {
+    background-color: #fdfbf6;
+    color: #042842;
+  }
+  .contenedor-prin {
+    display: grid;
+    align-content: center;
+    padding: 20px 120px 0;
+    height: 81vh;
+  }
+  #titulo {
+    font-size: 50px;
+    margin-bottom: 35px;
+  }
+  #contenido {
+    display: flex;
+    padding: 0 35px;
+    gap: 32px;
+    align-items: center;
+  }
+  #content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  #text-info {
+    font-size: 20px;
+    margin: 0;
+    color: #054a71;
+  }
+  #text-boton {
+    font-size: 9px;
+    font-weight: 600;
+    color: #054a71;
+    margin-bottom: 5px;
+  }
+
+  #content-check {
+    display: flex;
+    gap: 5px;
+    margin-top: 7px;
+  }
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    cursor: pointer;
+    font-size: 12px;
+    user-select: none;
+  }
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #ccc;
+  }
+  .container input:checked ~ .checkmark {
+    background-color: #2196f3;
+  }
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  .container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  #text-check {
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .prueba {
+    width: 480px;
+    height: auto;
+  }
+</style>

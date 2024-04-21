@@ -1,0 +1,75 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+import ContentPregun from "../../components/react/ContentPregun";
+import ContentResultado from "../../components/react/ContentResultado";
+---
+
+<Layout title="Prueba">
+  <main>
+    <section class="contenedor">
+      <ContentResultado client:load />
+      <!-- <div id="content-titulo">
+        <h1 id="titulo">Prueba de <span class="cuadro">Orientación</span></h1>
+        <p>
+          Este test se adapta a sus necesidades, es gratuito y le llevará menos
+          de 15 minutos.
+        </p>
+      </div>
+      <section id="preguntas">
+        <ContentPregun client:load />
+      </section>
+      <span id="text">
+        Utilizamos tus respuestas para orientarte a encontrar una Vocación.
+      </span> -->
+    </section>
+  </main>
+</Layout>
+<Footer />
+
+<script>
+  // const result: number[] = [];
+  // const formulario = document.getElementById("formulario") ?? null;
+  // if (formulario) {
+  //   formulario.addEventListener("submit", (e) => {
+  //     e.preventDefault();
+  //     const valorSeleccionado = document.querySelector(
+  //       'input[name="value-radio"]:checked'
+  //     ) as HTMLInputElement;
+  //     if (valorSeleccionado !== null) {
+  //       result.push(parseInt(valorSeleccionado.value));
+  //       window.localStorage.setItem("repuestasUser", JSON.stringify(result));
+  //       // console.log(valorSeleccionado);
+  //       console.log(window.localStorage.getItem("repuestasUser"));
+  //       if (valorSeleccionado.checked === true)
+  //         valorSeleccionado.checked = false;
+  //     }
+  //     // alert(valorSeleccionado.value);
+  //   });
+  // }
+</script>
+
+<style is:global>
+  .contenedor {
+    padding: 40px 120px;
+    height: 81vh;
+  }
+  #content-titulo-pregunta {
+    margin-bottom: 30px;
+  }
+  #titulo-pregunta {
+    font-size: 34px;
+  }
+  #preguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding-top: 15px;
+  }
+  #text-preguntas {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 14px;
+  }
+</style>

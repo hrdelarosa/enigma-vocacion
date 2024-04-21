@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+import CardUniversidades from "../../components/CardUniversidades.astro";
+import ContentResultUni from "../../components/react/ContentResultUni";
+---
+
+<Layout title="Resultado">
+  <main>
+    <div class="contenedor">
+      <!-- <h1 id="titulo">
+        <span class="cuadro">Resultado</span> de la Prueba.
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id
+        aliquid vitae labore eos obcaecati ducimus minima quo quis commodi, nam
+        dolore sequi fugiat laboriosam excepturi repellat consequatur
+        exercitationem. Voluptatibus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Provident delectus corrupti, mollitia quia quae
+        expedita veritatis, optio voluptate tempore fuga totam assumenda nam
+        dolor molestias neque deserunt nesciunt esse iure.
+      </p>
+      <div id="contenido">
+        <h2>Area asignada</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
+          expedita quis quae. Pariatur unde temporibus hic consequatur, magnam
+          illo, maiores quas nobis aspernatur sit maxime, iusto fuga vitae
+          tempora accusantium.
+        </p>
+      </div>
+      <section class="contenedor-universidades"> -->
+      <ContentResultUni client:load />
+      <!-- </section> -->
+    </div>
+  </main>
+</Layout>
+<Footer />
+
+<style>
+  .contenedor {
+    display: grid;
+    /* align-content: center; */
+    padding: 50px 120px;
+    height: 81vh;
+  }
+  h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 18px;
+  }
+  #contenido {
+    margin-top: 25px;
+  }
+  .contenedor-universidades {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    row-gap: 25px;
+  }
+</style>

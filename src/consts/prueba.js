@@ -1,0 +1,285 @@
+export const preguntas = {
+  1: {
+    pregunta: "¿Te gusta ver debates políticos en la televisión?",
+    area: "Ciencias Políticas",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  2: {
+    pregunta: "¿Te suena interesante la literatura clásica?",
+    area: "Ciencias Políticas",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  3: {
+    pregunta: "¿Te gustaría estudiar a fondo las obras de Shakespeare, Marlowe o Conan Doyle en versión original?",
+    area: "Ciencias Políticas",
+    respuestas: ["Si, me gustaría", "Tal vez algunas de sus obras"],
+    respuestaCorrecta: 0,
+  },
+  4: {
+    pregunta: "¿Tienes catalogados tus libros en función de su contenido?",
+    area: "Ciencias Políticas",
+    respuestas: ["Es aburrido", "Si, los guardo en orden"],
+    respuestaCorrecta: 1,
+  },
+  5: {
+    pregunta: "¿Te gusta ver obras de teatro?",
+    area: "Ciencias Políticas",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  6: {
+    pregunta: "¿Te gustan idiomas tales como el griego y el latín?",
+    area: "Ciencias Políticas",
+    respuestas: ["Se me hacen difíciles", "Considero que son interesantes"],
+    respuestaCorrecta: 1,
+  },
+  7: {
+    pregunta: "¿Consideras importante conocer el pasado para entender el presente?",
+    area: "Ciencias Políticas",
+    respuestas: ["Es irrelevante", "Es la mejor manera de repetir nuestros errores"],
+    respuestaCorrecta: 1,
+  },
+  8: {
+    pregunta: "¿Te gustaría poder entender el comportamiento humano?",
+    area: "Ciencias Políticas",
+    respuestas: ["No me interesa", "Me parece un tema interesante"],
+    respuestaCorrecta: 1,
+  },
+  9: {
+    pregunta: "¿Te gustaría trabajar en la administración pública?",
+    area: "CIENCIAS POLITICAS",
+    respuestas: ["NO", "Si sería un gran trabajo"],
+    respuestaCorrecta: 1,
+  },
+  10: {
+    pregunta: "¿Sientes interés por los pensamientos de Sócrates, Aristóteles y Platón?",
+    area: "Ciencias Políticas",
+    respuestas: ["Poco", "Bastante", "Muchísimo"],
+    respuestaCorrecta: 1,
+  },
+  11: {
+    pregunta: "¿Te gustaría poder estudiar a fondo obras de la literatura italiana?",
+    area: "Ciencias Políticas",
+    respuestas: ["Me encantaría", "Tal vez alguna de ellas"],
+    respuestaCorrecta: 0,
+  },
+  12: {
+    pregunta: "¿Te gustaría estudiar a fondo las obras de a Goethe, Nietzsche y Kafka en versión original?",
+    area: "Ciencias Políticas",
+    respuestas: ["NO", "Tal vez algunas de sus obras"],
+    respuestaCorrecta: 1,
+  },
+  13: {
+    pregunta: "¿Me considero una persona creativa e imaginativa?",
+    area: "Artes y Humanidades",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  14: {
+    pregunta: "¿Me encuentro más cómodo/a?",
+    area: "Artes y Humanidades",
+    respuestas: ["Creando", "Haciendo", "Analizando"],
+    respuestaCorrecta: 0,
+  },
+  15: {
+    pregunta: "¿Disfruto con la lectura?",
+    area: "Artes y Humanidades",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  16: {
+    pregunta: "¿Me atraen las texturas, los colores, las formas?",
+    area: "Artes y Humanidades",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  17: {
+    pregunta: "¿Me interesan los idiomas?",
+    area: "Artes y Humanidades",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  18: {
+    pregunta: "¿Cuándo viajo me gusta admirar?",
+    area: "Artes y Humanidades",
+    respuestas: ["La arquitectura", "Los paisajes", "Las plantas"],
+    respuestaCorrecta: 0,
+  },
+  19: {
+    pregunta: "¿Los temas políticos me interesan mucho?",
+    area: "Artes y Humanidades",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 1,
+  },
+  20: {
+    pregunta: "¿Entre mis actividades del fin de semana no puede faltar?",
+    area: "Artes y Humanidades",
+    respuestas: ["Una obra o concierto", "Una visita a un museo de ciencia", "Visitar un zoológico"],
+    respuestaCorrecta: 1,
+  },
+  21: {
+    pregunta: "¿Me gusta plasmar mis sentimientos y pensamientos en diferentes formas de arte?",
+    area: "Artes y Humanidades",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  22: {
+    pregunta: "¿Le doy mucha importancia a la estética y al buen gusto?",
+    area: "Artes y Humanidades",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  23: {
+    pregunta: "¿Considero que es importante transmitir mis emociones?",
+    area: "Artes y Humanidades",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  24: {
+    pregunta: "¿Cuándo voy de viaje a otra ciudad lo primero que quiero conocer son?",
+    area: "Artes y Humanidades",
+    respuestas: ["Los edificios gubernamentales", "Los museos", "Los parques"],
+    respuestaCorrecta: 1,
+  },
+  25: {
+    pregunta: "¿Lo más parecido a un trabajo soñado es?",
+    area: "Artes y Humanidades",
+    respuestas: ["Compositor", "Biólogo", "Abogado"],
+    respuestaCorrecta: 0,
+  },
+  26: {
+    pregunta: "¿Se me da bien expresarme con el cuerpo?",
+    area: "Artes y Humanidades",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  27: {
+    pregunta: "¿Se me da bien interactuar con otros?",
+    area: "Biologicas y de la Salud",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  28: {
+    pregunta: "Me interesa pasar el tiempo…",
+    area: "Biologicas y de la Salud",
+    respuestas: ["Haciendo dibujos", "Aprendiendo cosas interesantes", "Haciendo arreglos en la casa"],
+    respuestaCorrecta: 1,
+  },
+  29: {
+    pregunta: "Me motiva mucho la resolución de problemas",
+    area: "Biologicas y de la Salud",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  30: {
+    pregunta: "Creo que es suficiente que las personas se sientan bien aunque realmente no haya una mejora en sus vidas",
+    area: "Biologicas y de la Salud",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  31: {
+    pregunta: "Lo parecido a un trabajo soñado es…",
+    area: "Biologicas y de la Salud",
+    respuestas: ["Dirigir una empresa", "Atender a pacientes y ayudarlos", "Ser un experto en reforma de hogares"],
+    respuestaCorrecta: 1,
+  },
+  32: {
+    pregunta: "Me da satisfacción ayudar a los demás…",
+    area: "Biologicas y de la Salud",
+    respuestas: ["Si", "No"],
+    respuestaCorrecta: 0,
+  },
+  33: {
+    pregunta: "¿Te preocupa la crisis ambiental que vive el planeta y quisieras hacerla desaparecer?",
+    area: "Biologicas y de la Salud",
+    respuestas: ["No me interesa demasiado", "Sí, es algo que hay que tratar de cambiar", "Me gustaría participar activamente en esta labor"],
+    respuestaCorrecta: 2,
+  },
+  34: {
+    pregunta: "¿Valoras la seguridad e higiene y las promueves?",
+    area: "Biologicas y de la Salud",
+    respuestas: ["Poco", "Algo", "Mucho"],
+    respuestaCorrecta: 2,
+  },
+  35: {
+    pregunta: "¿Te gustaría trabajar en un laboratorio investigando y buscando la cura a las enfermedades, descubrir vacunas, etc.?",
+    area: "Biologicas y de la Salud",
+    respuestas: ["No es mi principal objetivo", "Lo consideraría una buena ocupación", "¡Me encantaría!"],
+    respuestaCorrecta: 2,
+  },
+  36: {
+    pregunta: "¿Te inquieta conocer el cuerpo humano y animal?",
+    area: "Biologicas y de la Salud",
+    respuestas: ["Poco", "Algo", "Mucho"],
+    respuestaCorrecta: 2,
+  },
+  37: {
+    pregunta: "¿Consideras que las energías renovables son el futuro?",
+    area: "Fisico-Matematicas e Ingenierias",
+    respuestas: ["Sí, muy pronto estarán integradas en nuestra sociedad", "Sí, pero todavía queda mucho para que sean comunes", "No, dependeremos de combustibles fósiles"],
+    respuestaCorrecta: 0,
+  },
+  38: {
+    pregunta: "¿Tienes liderazgo al trabajar en grupo?",
+    area: "Fisico-Matematicas e Ingenierias",
+    respuestas: ["No, dejo que otros tomen las riendas", "Sí, me gusta llevar la iniciativa", "Sí, soy un líder nato"],
+    respuestaCorrecta: 2,
+  },
+  39: {
+    pregunta: "¿Sientes interés por la electrónica y los componentes de las máquinas?",
+    area: "Fisico-Matematicas e Ingenierias",
+    respuestas: ["Por lo general no", "Sí, me gusta", "Es algo que me encanta"],
+    respuestaCorrecta: 2,
+  },
+  40: {
+    pregunta: "¿Sé que te da bien el dibujo técnico?",
+    area: "Fisico-Matematicas e Ingenierias",
+    respuestas: ["No demasiado", "Bastante", "Sí, se me da bastante bien"],
+    respuestaCorrecta: 2,
+  },
+  41: {
+    pregunta: "¿Te gustaría diseñar y planificar el tráfico de tu ciudad?",
+    area: "Fisico-Matematicas e Ingenierias",
+    respuestas: ["Poco", "Bastante", "Mucho"],
+    respuestaCorrecta: 2,
+  },
+  42: {
+    pregunta: "¿El mundo de la industria textil te resulta atrayente?",
+    area: "Fisico-Matematicas e Ingenierias",
+    respuestas: ["Poco", "Bastante", "Mucho"],
+    respuestaCorrecta: 2,
+  },
+  43: {
+    pregunta: "¿Te interesan temas relacionados con el trabajo del metal?",
+    area: "Fisico-Matematicas e Ingenierias",
+    respuestas: ["Poco", "Bastante", "Mucho"],
+    respuestaCorrecta: 2,
+  },
+  44: {
+    pregunta: "¿Te gusta saber cómo funcionan internamente las máquinas y las computadoras?",
+    area: "Fisico-Matematicas e Ingenierias",
+    respuestas: ["Poco", "Bastante", "Mucho"],
+    respuestaCorrecta: 2,
+  },
+  45: {
+    pregunta: "¿Tienes la paciencia y la persistencia para enfrentar problemas complejos y trabajar en la resolución detallada de desafíos numéricos o geométricos?",
+    area: "Fisico-Matematicas e Ingenierias",
+    respuestas: ["Me resulta aburrido", "No estoy seguro", "Si, puedo pasar horas encontrando la solución a ese tipo de problemas"],
+    respuestaCorrecta: 2,
+  },
+  46: {
+    pregunta: "¿Eres habilidoso haciendo operaciones matemáticas en tu día a día?",
+    area: "Fisico-Matematicas e Ingenierias",
+    respuestas: ["No, otras cosas se me dan mejor", "Sí, me resulta tan fácil", "Sí, se me da de maravilla"],
+    respuestaCorrecta: 2,
+  }
+}
+
+
+// export const respuestas = [
+//   0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2
+// ]
+// export const respuestas = [0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0]
+export const respuestas = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 2, 2, 2, 2, 0, 0, 0, 0, 0, 2, 2, 2, 2, 0]

@@ -1,0 +1,142 @@
+---
+import { Image } from "astro:assets";
+import Uagro from "../icons/Uagro.astro";
+import logo from "../img/LogoVG.png";
+---
+
+<header class="cabecera">
+  <a class="logo" href="/">
+    <section>
+      <Image class="logoHome" src={logo} alt="logo" />
+      <span id="vocacion">Vocación<br /> Enigma</span>
+    </section>
+    <span id="separador"></span>
+    <Uagro />
+  </a>
+  <nav>
+    <ul>
+      <li>
+        <a href="/universidades">Universidades</a>
+      </li>
+      <li>
+        <a href="/iniciar-prueba">Prueba</a>
+      </li>
+      <li>
+        <a href="https://www.uagro.mx/" target="_blank">UAGro</a>
+      </li>
+      <li>
+        <a href="mailto:20443301@uagro.mx" target="_blank">Contactanos</a>
+      </li>
+      <li>
+        <div id="contenedor-boton">
+          <a href="/iniciar-sesion" id="comenzar">Iniciar sesión</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const cabecera = document.querySelector(".cabecera");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) cabecera?.classList.add("scrolled");
+    else cabecera?.classList.remove("scrolled");
+  });
+</script>
+
+<style>
+  .cabecera {
+    background-color: #fefefe;
+    color: #042842;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    position: sticky;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .scrolled {
+    background-color: rgb(254, 254, 254, 0.56);
+    backdrop-filter: blur(12px);
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 80px;
+  }
+  .logo:hover span {
+    color: #074c75;
+  }
+  .logo:hover #separador {
+    background-color: #074c75;
+  }
+  section {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .logoHome {
+    width: 56px;
+    height: auto;
+  }
+  #vocacion {
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  /* div section {
+    display: flex;
+    align-items: center;
+  } */
+  #separador {
+    height: 35px;
+    width: 2px;
+    background-color: #042842;
+  }
+  nav {
+    margin-right: 80px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #042842;
+    font-weight: 600;
+    transition: color ease-in-out 0.3s;
+  }
+  a:hover {
+    color: #074c75;
+  }
+
+  #contenedor-boton {
+    display: flex;
+    align-items: center;
+  }
+  #comenzar {
+    background-color: #d9eef4;
+    color: #042842;
+    border: 1px solid #042842;
+    cursor: pointer;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #comenzar:hover {
+    background-color: #054a71;
+    border: 1px solid #054a71;
+    color: #d9eef4;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  }
+</style>

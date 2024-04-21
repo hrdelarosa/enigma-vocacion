@@ -1,0 +1,105 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import logo from "../img/LogoVG.png";
+import google from "../img/google.png";
+---
+
+<Layout title="Iniciar sesión">
+  <main>
+    <div>
+      <Image class="logo" src={logo} alt="Vocacion" />
+      <section class="contenido">
+        <h1>Vocación Enigma</h1>
+        <h2>Encuentra tu vocación con nuestra prueba.</h2>
+        <p id="inicio">Inicie sesión con su Correo Instituciona</p>
+        <p>
+          Bienvenido a la plataforma Vocación Enigma. Para ingresar y poder
+          empezar con muestro test de orientación vocacional deveras ingresar
+          con tu correo electrónico institucional @uagro.mx. Para continuar con
+          ello, da clic en Iniciar Sesión.
+        </p>
+        <div id="contenedor-boton">
+          <a 
+            id="comenzar"
+          >
+            Iniciar Sesión
+            <Image class="google" src={google} alt="a" />
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>
+<Footer />
+
+<style>
+  main {
+    background-color: #fdfbf6;
+    color: #042842;
+    height: 81vh;
+  }
+  div {
+    height: 100%;
+    display: flex;
+    padding: 0 230px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .contenido {
+    margin-left: 20px;
+  }
+  .logo {
+    width: 300px;
+    height: auto;
+  }
+  h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
+  }
+  h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  #inicio {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  #contenedor-boton {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: start;
+  }
+  #comenzar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #d9eef4;
+    color: #042842;
+    border: 1px solid #042842;
+    cursor: pointer;
+    padding: 10px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #comenzar:hover {
+    background-color: #042842;
+    border: 1px solid #042842;
+    color: #d9eef4;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  }
+  .google {
+    width: 25px;
+    height: auto;
+  }
+</style>
